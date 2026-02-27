@@ -14,7 +14,7 @@ const Hero = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: contRef.current,
-        scrub: 1,
+        scrub: true,
         pin: true,
         pinSpacing: true,
         start: "top top",

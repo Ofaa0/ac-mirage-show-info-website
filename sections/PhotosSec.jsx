@@ -35,10 +35,10 @@ const PhotosSec = () => {
         },
       });
       gsap.from(".vid", {
-        duration: 1,
+        duration: 3,
         x: -800,
         // y:-800,
-        ease: "bounce.inOut",
+        ease: "expo.out",
         stagger: {
           each: 1,
         },
