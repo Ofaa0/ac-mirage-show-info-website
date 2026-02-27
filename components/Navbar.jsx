@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { IoVolumeHighSharp, IoVolumeMuteSharp } from "react-icons/io5";
+import { RiMenu4Fill } from "react-icons/ri";
 
 const Navbar = () => {
   const [play, setPlay] = useState(false);
@@ -15,25 +16,30 @@ const Navbar = () => {
           <h1 className="font-oct-game font-bold">mirage</h1>
         </div>
         <nav className="flex items-center gap-4">
-          <p className="font-oct-game bg-white text-black px-4 py-1 rounded-full cursor-pointer">
-            home
-          </p>
-          <p className="font-oct-game bg-white text-black px-4 py-1 rounded-full cursor-pointer">
-            about
-          </p>
-          <p className="font-oct-game bg-white text-black px-4 py-1 rounded-full cursor-pointer">
-            charachters
-          </p>
-          <p className="font-oct-game bg-white text-black px-4 py-1 rounded-full cursor-pointer">
-            more
-          </p>
-          {play ? (
+          <>
+            <p className="font-oct-game hidden lg:block bg-white text-black px-4 py-1 rounded-full cursor-pointer">
+              home
+            </p>
+            <p className="font-oct-game hidden lg:block bg-white text-black px-4 py-1 rounded-full cursor-pointer">
+              about
+            </p>
+            <p className="font-oct-game hidden lg:block bg-white text-black px-4 py-1 rounded-full cursor-pointer">
+              charachters
+            </p>
+            <p className="font-oct-game hidden lg:block bg-white text-black px-4 py-1 rounded-full cursor-pointer">
+              more
+            </p>
+          </>
+          <RiMenu4Fill className="text-white text-4xl cursor-pointer lg:hidden" />
+          <div className="w-200 h-full absolute">
+            <audio loop ref={music} src="/music.mp3" className="hidden"></audio>
+            {play ? (
             <IoVolumeHighSharp
               onClick={() => {
                 setPlay(!play);
                 music.current.pause();
               }}
-              className="animate-pulse text-4xl bg-black text-white rounded-full w-18 cursor-pointer"
+              className="animate-pulse text-4xl bg-[#244154] text-white rounded-full w-18 cursor-pointer absolute right-205 top-1/2 -translate-y-1/2"
             />
           ) : (
             <IoVolumeMuteSharp
@@ -41,11 +47,9 @@ const Navbar = () => {
                 setPlay(!play);
                 music.current.play();
               }}
-              className="animate-pulse text-4xl bg-black text-white rounded-full w-18 cursor-pointer"
+              className="animate-pulse text-4xl bg-[#244154] text-white rounded-full w-18 cursor-pointer absolute right-205 top-1/2 -translate-y-1/2"
             />
           )}
-          <div>
-            <audio loop ref={music} src="/music.mp3"></audio>
           </div>
         </nav>
       </div>

@@ -56,13 +56,13 @@ const CharactersSec = () => {
     >
       <h1
         id="greet-text"
-        className="font-oct-game text-5xl font-black text-black text-center"
+        className="font-oct-game text-3xl lg:text-5xl font-black text-black text-center"
       >
         discover our <br />
         game characters
       </h1>
       <div className="container w-full flex justify-center">
-        <div id="charCont" className="grid grid-cols-4 gap-20">
+        <div id="charCont" className="grid grid-cols-1 lg:grid-cols-4 gap-20">
           {charsList.map((charPerson, index) => (
             <div
               key={charPerson.name}

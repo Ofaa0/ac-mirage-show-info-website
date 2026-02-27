@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import AboutSec from "@/sections/AboutSec";
 import AfterAbout from "@/sections/AfterAbout";
 import CharactersSec from "@/sections/CharactersSec";
+import Footer from "@/sections/Footer";
 import Hero from "@/sections/Hero";
 import PhotosSec from "@/sections/PhotosSec";
 
@@ -18,6 +19,7 @@ export default function Home() {
       <CharactersSec />
       <AfterAbout text1={"Valley of Memory, a free major update, introduces"} text2={"the stunning new region of AlUla and features a new story arc for Basim. Explore a breathtaking landscape of deserts and oases while uncovering family secrets and facing a ruthless gang threatening the valley’s peace. Enjoy fan-requested gameplay enhancements including mission replay, smoother parkour, and deeper customization for a more immersive experience."} />
       <PhotosSec />
+      <Footer />
     </div>
   );
 }

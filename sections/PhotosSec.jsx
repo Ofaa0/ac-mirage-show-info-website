@@ -45,6 +45,7 @@ const PhotosSec = () => {
         scrollTrigger: {
           trigger: ".vidCont",
           start: "-5% center",
+          end: "center center",
           toggleActions: "play none reverse none",
         },
       });
@@ -54,19 +55,19 @@ const PhotosSec = () => {
   return (
     <div
       ref={contRef}
-      className="w-full py-10 flex flex-col justify-center items-center"
+      className="w-full py-10 pb-20 flex flex-col justify-center items-center"
     >
       <h1
         id="greet-text"
-        className="font-oct-game text-5xl font-black text-black text-center pb-20"
+        className="font-oct-game text-3xl lg:text-5xl w-100 lg:w-150  font-black text-black text-center pb-20"
       >
         Now it is our <span className="font-square-game">15</span>th <br />{" "}
         anniversary
         <br /> celebrate with us
       </h1>
-      <div className="container w-full flex justify-center items-start">
+      <div className="container w-full flex justify-center items-start px-4 lg:px-0">
         <div className="">
-          <div className="vidCont h-fit grid grid-cols-2 gap-10  overflow-hidden">
+          <div className="vidCont h-fit grid grid-cols-1 lg:grid-cols-2 gap-10  overflow-hidden">
             <div
               onMouseEnter={() => {
                 setVid1play(true);
@@ -94,12 +95,15 @@ const PhotosSec = () => {
                 className={`text-9xl text-white absolute animate-pulse font-bold left-1/2 top-1/2 -translate-1/2 ${vid1play && "hidden"}`}
               />
             </div>
-            <div onMouseEnter={() => {
+            <div
+              onMouseEnter={() => {
                 setVid2play(true);
               }}
               onMouseLeave={() => {
                 setVid2play(false);
-              }} className="overflow-hidden w-fit h-fit relative">
+              }}
+              className="overflow-hidden w-fit h-fit relative"
+            >
               <video
                 ref={vid2}
                 src="/vid2.mp4"

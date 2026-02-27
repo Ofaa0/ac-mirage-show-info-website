@@ -52,7 +52,7 @@ const AboutSec = () => {
         </h1>
         <p
           id="greet-text"
-          className="font-oct-game uppercase text-4xl text-black text-center w-150 font-extrabold overflow-hidden"
+          className="font-oct-game uppercase text-3xl lg:text-5xl text-black text-center w-80 lg:w-150 font-extrabold overflow-hidden"
         >
           new story new chapter Valley of Memory - Available now
         </p>

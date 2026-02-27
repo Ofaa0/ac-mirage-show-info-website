@@ -36,8 +36,8 @@ const AfterAbout = ({ text1, text2 }) => {
       ref={contRef}
       className="bg-blue-100 w-full py-40 flex justify-center items-center"
     >
-      <div className="container">
-        <p id="text" className="text-gray-700 w-100 font-medium">
+      <div className="container px-4 lg:px-0">
+        <p id="text" className="text-gray-700 w-80 lg:w-120 font-medium">
           <span className="text-black">{text1}</span> <br />
           {text2}
         </p>

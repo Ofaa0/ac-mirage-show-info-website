@@ -53,7 +53,7 @@ const Loading = () => {
   return (
     <div
       ref={loadRef}
-      className="w-full h-dvh bg-blue-100 text-black fixed top-0 left-0 z-200 flex justify-center items-center font-oct-game text-7xl scale-y-0 cursor-none overflow-hidden"
+      className="w-full h-dvh bg-blue-100 text-black fixed top-0 left-0 z-200 flex justify-center items-center font-oct-game text-3xl lg:text-7xl scale-y-0 cursor-none overflow-hidden"
     >
       Loading...
     </div>
