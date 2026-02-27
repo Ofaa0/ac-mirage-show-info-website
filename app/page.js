@@ -10,7 +10,7 @@ import PhotosSec from "@/sections/PhotosSec";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center flex-col bg-blue-100 font-sans">
+    <div className="flex w-full min-h-screen items-center justify-center flex-col bg-blue-100 font-sans overflow-hidden">
       <Loading />
       <Navbar />
       <Hero />

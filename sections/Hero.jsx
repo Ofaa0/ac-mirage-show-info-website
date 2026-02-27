@@ -69,7 +69,7 @@ const Hero = () => {
                 One, PlayStation®5, PlayStation®4, EPIC, Steam, Amazon Luna, and
                 compatible iOS devices.
               </p>
-              <h3 className=" font-bold text-6xl lg:text-9xl  text-white text-center font-oct-game absolute bottom-15 right-0 italic">
+              <h3 className=" font-bold text-6xl lg:text-9xl  text-white text-center font-oct-game absolute bottom-10 lg:bottom-15 right-0 italic">
                 mirage
               </h3>
               <Button moreStyle={"absolute left-0 lg:top-80 top-90"} />

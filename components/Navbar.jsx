@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <header className="w-full bg-white/40 backdrop-blur-2xl h-16 flex justify-center items-center absolute top-0 left-0 z-[100]">
-      <div className="container flex items-center justify-between">
+      <div className="container flex items-center justify-between px-4 lg:px-0">
         <div className="flex items-center">
           <Image src={"/logo.png"} width={50} height={50} alt="logo" />
           <h1 className="font-oct-game font-bold">mirage</h1>
@@ -31,15 +31,13 @@ const Navbar = () => {
             </p>
           </>
           <RiMenu4Fill className="text-white text-4xl cursor-pointer lg:hidden" />
-          <div className="w-200 h-full absolute">
-            <audio loop ref={music} src="/music.mp3" className="hidden"></audio>
-            {play ? (
+          {play ? (
             <IoVolumeHighSharp
               onClick={() => {
                 setPlay(!play);
                 music.current.pause();
               }}
-              className="animate-pulse text-4xl bg-[#244154] text-white rounded-full w-18 cursor-pointer absolute right-205 top-1/2 -translate-y-1/2"
+              className="animate-pulse text-4xl bg-[#244154] text-white rounded-full w-18 cursor-pointer"
             />
           ) : (
             <IoVolumeMuteSharp
@@ -47,10 +45,10 @@ const Navbar = () => {
                 setPlay(!play);
                 music.current.play();
               }}
-              className="animate-pulse text-4xl bg-[#244154] text-white rounded-full w-18 cursor-pointer absolute right-205 top-1/2 -translate-y-1/2"
+              className="animate-pulse text-4xl bg-[#244154] text-white rounded-full w-18 cursor-pointer"
             />
           )}
-          </div>
+            <audio loop ref={music} src="/music.mp3" className="hidden"></audio>
         </nav>
       </div>
     </header>
