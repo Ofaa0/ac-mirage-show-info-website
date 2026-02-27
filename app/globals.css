@@ -24,3 +24,80 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@font-face {
+  font-family: "Good-Game";
+  src:
+    url("../public/fonts/GoodGameRegular.woff2") format("woff2"),
+    url("../public/fonts/GoodGameRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FUN GAMES";
+  src:
+    url("../public/fonts/FUNGAMES.woff2") format("woff2"),
+    url("../public/fonts/FUNGAMES.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Octopus Game";
+  src:
+    url("../public/fonts/OctopusGame-Italic.woff2") format("woff2"),
+    url("../public/fonts/OctopusGame-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Square Game";
+  src:
+    url("../public/fonts/SquareGame-Regular.woff2") format("woff2"),
+    url("../public/fonts/SquareGame-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Octopus Game";
+  src:
+    url("../public/fonts/OctopusGame.woff2") format("woff2"),
+    url("../public/fonts/OctopusGame.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-oct-game: "Octopus Game";
+  --font-square-game: "Square Game";
+  --font-fun-game: "FUN GAMES";
+  --font-good-game: "Good-Game";
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* track */
+::-webkit-scrollbar-track {
+  background: #98b4ff;
+}
+
+/* thumb */
+::-webkit-scrollbar-thumb {
+  background: #f4ff94;
+}
+
+/* hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #5fbde6;
+}

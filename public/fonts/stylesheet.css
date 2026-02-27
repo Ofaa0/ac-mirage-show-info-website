@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Good-Game';
+    src: url('GoodGameRegular.woff2') format('woff2'),
+        url('GoodGameRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FUN GAMES';
+    src: url('FUNGAMES.woff2') format('woff2'),
+        url('FUNGAMES.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Octopus Game';
+    src: url('OctopusGame-Italic.woff2') format('woff2'),
+        url('OctopusGame-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Square Game';
+    src: url('SquareGame-Regular.woff2') format('woff2'),
+        url('SquareGame-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Octopus Game';
+    src: url('OctopusGame.woff2') format('woff2'),
+        url('OctopusGame.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
