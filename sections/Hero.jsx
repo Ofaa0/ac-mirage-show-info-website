@@ -43,7 +43,7 @@ const Hero = () => {
         ref={contRef}
         className="w-full h-dvh overflow-hidden relative will-change-[clip-path] flex justify-center bg"
       >
-        <div className="w-screen h-dvh left-0 top-0 absolute z-10 bg-amber-200">
+        <div className="w-screen h-dvh left-0 top-0 absolute z-10">
          
           {/* <Image src={"/wal1.jpg"} width={500} height={700}/> */}
           <video
