@@ -9,8 +9,11 @@ gsap.registerPlugin(SplitText, ScrollTrigger, ScrambleTextPlugin);
 
 const AfterAbout = ({ text1, text2 }) => {
   const contRef = useRef();
+  
+ 
   useGSAP(
     () => {
+      
       const myText = new SplitText("#text", { type: "chars", smartWrap: true });
 
       gsap.from(myText.chars, {
