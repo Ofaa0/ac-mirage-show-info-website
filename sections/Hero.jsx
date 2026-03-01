@@ -41,7 +41,7 @@ const Hero = () => {
       </h3> */}
       <div
         ref={contRef}
-        className="w-full h-dvh overflow-hidden relative will-change-[clip-path] flex justify-center bg"
+        className="w-full h-dvh overflow-hidden relative will-change-[clip-path] flex justify-center"
       >
         <div className="w-screen h-dvh left-0 top-0 absolute z-10">
          

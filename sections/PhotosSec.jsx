@@ -75,7 +75,7 @@ const PhotosSec = () => {
               onMouseLeave={() => {
                 setVid1play(false);
               }}
-              className="overflow-hidden w-fit h-fit relative"
+              className="overflow-hidden w-fit h-fit relative hover:scale-90 hover:skew-y-2 duration-300"
             >
               <video
                 ref={vid1}
@@ -102,7 +102,7 @@ const PhotosSec = () => {
               onMouseLeave={() => {
                 setVid2play(false);
               }}
-              className="overflow-hidden w-fit h-fit relative"
+              className="overflow-hidden w-fit h-fit relative hover:scale-90 hover:skew-y-2 duration-300"
             >
               <video
                 ref={vid2}

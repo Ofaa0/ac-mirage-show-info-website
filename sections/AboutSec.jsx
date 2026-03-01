@@ -10,42 +10,79 @@ const AboutSec = () => {
   const contRef = useRef();
   useGSAP(
     () => {
-      const greetText = new SplitText("#greet-text", { type: "words" ,mask:true});
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#sec-pic",
+          start: "-10% 20%",
+          end: "+=150vh",
+          scrub: 2,
+          pin: true,
+          pinSpacing: true,
+        },
+      });
+      const greetText = new SplitText("#greet-text", {
+        type: "words",
+        mask: true,
+      });
       gsap.from(greetText.words, {
         autoAlpha: 0,
         x: -180,
-        skewX:90,
+        skewX: 90,
         scale: 0.4,
         scrollTrigger: {
           trigger: "#greet-text",
           start: "-10% center",
-          end:"center center",
+          end: "center center",
           // toggleActions: "play restart reverse none",
         },
-        stagger:{
-            from:"end",
-            each:".04"
-        }
-      });
-      gsap.from("#sec-pic", {
-        scaleX: 0.3,
-        scaleY: 0.8,
-        borderRadius: 80,
-        duration: 3,
-        scrollTrigger: {
-          trigger: "#sec-pic",
-          start: "-15% top",
-          end: "+=150vh",
-          scrub: 1,
-          pin: true,
-          //pinSpacing:true
+        stagger: {
+          from: "end",
+          each: ".04",
         },
       });
+      // gsap.fromTo(
+      //   "#sec-pic",
+      //   {
+      //     // rotateY: -60,
+      //     //transformOrigin: "bottom",
+      //     scaleX: 0.2,
+      //     scaleY: 0.6,
+      //     borderRadius: 20,
+      //     skewY: 10,
+      //   },
+      //   {
+      //     scale: 1,
+      //     borderRadius: 0,
+      //     skewY: 0,
+      //     scrollTrigger: {
+      //       trigger: "#sec-pic",
+      //       start: "-20% top",
+      //       end: "+=120vh",
+      //       scrub: true,
+      //       pin: true,
+      //       //pinSpacing:true
+      //     },
+      //   },
+      // );
+      tl.set("#sec-pic", {
+        skewY: 10,
+        scaleX: 0.3,
+        scaleY: 0.6,
+        borderRadius: 20,
+      })
+        .to("#sec-pic", {
+          skewY: 0,
+        })
+        .to("#sec-pic", {
+          scaleX: 1,
+          scaleY: 1,
+          borderRadius: 0,
+        });
     },
     { scope: contRef },
   );
   return (
-    <div ref={contRef} className="w-full min-h-dvh overflow-hidden">
+    <div ref={contRef} className="w-full h-fit overflow-hidden">
       <div className="flex flex-col gap-4 justify-center items-center pb-10">
         <h1 className="font-oct-game uppercase text-sm text-black text-center">
           welcome to our story
@@ -59,7 +96,7 @@ const AboutSec = () => {
       </div>
       <section
         id="sec-pic"
-        className="w-full h-dvh bg-[url('/sec21.jpg')] bg-cover bg-center"
+        className="w-full h-dvh bg-[url('/abSec.webp')] bg-cover bg-center"
       ></section>
     </div>
   );
