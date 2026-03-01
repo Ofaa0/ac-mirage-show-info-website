@@ -3,19 +3,17 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import { useRef } from "react";
-import { useMediaQuery } from "react-responsive";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const AboutSec = () => {
   const contRef = useRef();
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" })
   useGSAP(
     () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: "#sec-pic",
-          start: "-10% 20%",
+          start: "-15% 20%",
           end: "+=150vh",
           scrub: 2,
           pin: true,
@@ -98,8 +96,10 @@ const AboutSec = () => {
       </div>
       <section
         id="sec-pic"
-        className={`w-full h-dvh ${isMobile?"bg-[url('/mobAbSec.webp')]":"bg-[url('/abSec.webp')]"} bg-cover bg-center`}
-      ></section>
+        className="w-full h-dvh bg-cover bg-center 
+             bg-[url('/mobAbSec.webp')] 
+             md:bg-[url('/abSec.webp')]"
+      />
     </div>
   );
 };
